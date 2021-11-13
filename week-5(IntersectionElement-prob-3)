@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+void intersection(int n,int a[],int m,int b[])
+{
+int i=0,j=0;
+while(i<n && j<m)
+{
+    if(a[i]==b[j])
+    {
+      cout<<b[j]<<" ";
+      j++;
+      i++;
+    }
+    else if(a[i]>a[j])
+    {   
+      j++;
+   }
+   else
+   {
+       i++;
+   }
+}
+
+}
+   
+int main()
+{
+    
+int i,n,j,m,t;
+ 
+cin>>t;
+for(j=0;j<t;j++)
+{
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+    cin>>a[i];
+    }
+    cin>>m;
+    int b[m];
+     for(i=0;i<n;i++)
+    {
+    cin>>b[i];
+    }
+  
+intersection(n,a,m,b);
+ return 0;
+}
+}
